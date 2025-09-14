@@ -113,3 +113,12 @@ function responsive() {
 
 window.addEventListener("resize", responsive)
 
+// Optional: efek scroll untuk header shadow
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('tw-shadow-lg');
+  } else {
+    header.classList.remove('tw-shadow-lg');
+  }
+});
